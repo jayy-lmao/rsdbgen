@@ -182,7 +182,7 @@ fn pg_type_to_rs_type(pg_type: &str) -> String {
         "date" => "chrono::NaiveDate",
         "float4" => "f32",
         "float8" => "f64",
-        "uuid" => "uuid::Uuid<uuid::Uuid>",
+        "uuid" => "uuid::Uuid",
         "boolean" => "bool",
         "bytea" => "Vec<u8>", // is this right?
         _ => panic!("Unknown type: {}", pg_type),
